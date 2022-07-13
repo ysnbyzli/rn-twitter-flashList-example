@@ -29,7 +29,7 @@ const Home = () => {
       <FlashList
         data={posts}
         estimatedItemSize={50}
-        keyExtractor={(item, index) => item.id}
+        keyExtractor={item => item.id}
         renderItem={({item}) => <Post item={item} />}
         showsVerticalScrollIndicator={false}
         ItemSeparatorComponent={() => (
