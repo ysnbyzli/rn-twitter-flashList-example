@@ -11,7 +11,7 @@ const Home = () => {
 
   const translateY = diffClamp.interpolate({
     inputRange: [0, 45],
-    outputRange: [0, -85],
+    outputRange: [0, -125],
     extrapolate: 'clamp',
   });
   return (

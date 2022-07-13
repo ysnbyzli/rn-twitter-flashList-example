@@ -5,7 +5,6 @@ import {MoreIcon, TwitterIcon} from '../../icons';
 const Header = () => {
   return (
     <View style={styles.container}>
-      {/* Profile Image*/}
       <Image
         source={{
           uri: 'https://pbs.twimg.com/profile_images/1198194754464432128/HYI2N_vM_400x400.jpg',
@@ -14,7 +13,6 @@ const Header = () => {
         resizeMode="cover"
       />
       <TwitterIcon />
-
       <MoreIcon />
     </View>
   );
@@ -36,6 +34,8 @@ const styles = StyleSheet.create({
     paddingVertical: 5,
     justifyContent: 'space-between',
     alignItems: 'center',
+    borderBottomWidth: 1,
+    borderBottomColor: '#CED5DC',
   },
   profileImage: {
     height: 32,
