@@ -1,10 +1,10 @@
 import {View, StyleSheet, Animated, SafeAreaView} from 'react-native';
 import React from 'react';
-import Header from '../components/shared/Header';
+import Header from '../components/home/Header';
 import {FlashList} from '@shopify/flash-list';
 import {posts} from '../dummyData/posts';
 import Post from '../components/home/Post';
-
+import FloatingButton from '../components/shared/FloatingButton';
 const Home = () => {
   const scrollY = new Animated.Value(0);
   const diffClamp = Animated.diffClamp(scrollY, 0, 45);
@@ -39,6 +39,8 @@ const Home = () => {
           scrollY.setValue(nativeEvent.contentOffset.y);
         }}
       />
+
+      <FloatingButton />
     </SafeAreaView>
   );
 };
