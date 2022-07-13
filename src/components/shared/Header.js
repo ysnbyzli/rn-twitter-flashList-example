@@ -24,11 +24,16 @@ export default Header;
 
 const styles = StyleSheet.create({
   container: {
+    position: 'absolute',
+    left: 0,
+    top: 0,
+    right: 0,
+    width: '100%',
+    backgroundColor: '#FFFFFF',
     flexDirection: 'row',
     height: 45,
     paddingHorizontal: 20,
     paddingVertical: 5,
-
     justifyContent: 'space-between',
     alignItems: 'center',
   },
