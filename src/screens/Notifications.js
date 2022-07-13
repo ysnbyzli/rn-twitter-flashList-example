@@ -1,14 +1,9 @@
-import {
-  StyleSheet,
-  SafeAreaView,
-  useWindowDimensions,
-  View,
-  Text,
-} from 'react-native';
+import {StyleSheet, SafeAreaView, Text} from 'react-native';
 import React, {useState} from 'react';
 import {SceneMap, TabBar, TabView} from 'react-native-tab-view';
 import All from '../components/notifications/tabs/All';
 import Mentions from '../components/notifications/tabs/Mentions';
+import Header from '../components/notifications/Header';
 import {SIZES} from '../constants';
 
 const renderScene = SceneMap({
@@ -17,13 +12,14 @@ const renderScene = SceneMap({
 });
 
 const Notifications = () => {
-  const [index, setIndex] = React.useState(0);
-  const [routes] = React.useState([
+  const [index, setIndex] = useState(0);
+  const [routes] = useState([
     {key: 'first', title: 'All'},
     {key: 'second', title: 'Mentions'},
   ]);
   return (
     <SafeAreaView style={styles.container}>
+      <Header />
       <TabView
         navigationState={{index, routes}}
         renderScene={renderScene}
