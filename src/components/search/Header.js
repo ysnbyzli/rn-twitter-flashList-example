@@ -1,17 +1,12 @@
 import {View, TextInput, StyleSheet, Image} from 'react-native';
 import React from 'react';
 import {SettingsIcon} from '../../icons';
+import ProfileImage from '../shared/ProfileImage';
 
 const Header = () => {
   return (
     <View style={styles.container}>
-      <Image
-        source={{
-          uri: 'https://pbs.twimg.com/profile_images/1198194754464432128/HYI2N_vM_400x400.jpg',
-        }}
-        style={styles.profileImage}
-        resizeMode="contain"
-      />
+      <ProfileImage />
       <View style={styles.searchContainer}>
         <TextInput style={styles.search} placeholder="Search Twitter" />
       </View>
@@ -31,11 +26,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     paddingHorizontal: 20,
     paddingVertical: 6,
-  },
-  profileImage: {
-    height: 32,
-    width: 32,
-    borderRadius: 32,
   },
   searchContainer: {
     flex: 1,
