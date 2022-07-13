@@ -1,7 +1,10 @@
 import {View, Text, StyleSheet, Image} from 'react-native';
 import React from 'react';
+import Actions from '../shared/Actions';
 
-const Post = ({item: {name, image, username, description, postImage}}) => {
+const Post = ({
+  item: {name, image, username, description, postImage, like, reTweet, comment},
+}) => {
   return (
     <View style={styles.container}>
       <Image
@@ -22,6 +25,7 @@ const Post = ({item: {name, image, username, description, postImage}}) => {
             resizeMode="stretch"
           />
         )}
+        <Actions like={like} comment={comment} reTweet={reTweet} />
       </View>
     </View>
   );

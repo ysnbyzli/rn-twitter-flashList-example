@@ -33,7 +33,7 @@ const Home = () => {
         renderItem={({item}) => <Post item={item} />}
         showsVerticalScrollIndicator={false}
         ItemSeparatorComponent={() => (
-          <View style={{height: 1, backgroundColor: '#CED5DC'}} />
+          <View style={{height: 1, backgroundColor: '#CED5DC', opacity: 0.5}} />
         )}
         onScroll={({nativeEvent}) => {
           scrollY.setValue(nativeEvent.contentOffset.y);
